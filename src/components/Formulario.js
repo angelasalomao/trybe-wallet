@@ -12,7 +12,7 @@ class Formulario extends React.Component {
       id: 0,
       value: '',
       description: '',
-      currency: '',
+      currency: 'USD',
       method: '',
       tag: '',
     };
@@ -43,6 +43,7 @@ class Formulario extends React.Component {
       method,
       tag,
     } = this.state;
+    
     const currencies = await fetchCurrencies();
     const expense = {
       id,
