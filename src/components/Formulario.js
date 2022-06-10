@@ -145,7 +145,7 @@ class Formulario extends React.Component {
     const { method, currency } = this.state;
     const { currencies } = this.props;
     return (
-      <form onSubmit={ this.submitForm }>
+      <form className="form-sub" onSubmit={ this.submitForm }>
         { this.handleValue() }
         { this.handleDescription() }
         <label htmlFor="currency">
