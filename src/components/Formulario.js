@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import fetchCurrencies from '../services/requestApi';
 import { getCurrencies, handleExpenses } from '../actions';
+import './Formulario.css';
 
 class Formulario extends React.Component {
   constructor() {
@@ -62,7 +63,7 @@ class Formulario extends React.Component {
       id: id + 1,
       value: '',
       description: '',
-      currency: '',
+      currency: 'USD',
       method: '',
       tag: '',
     }));
@@ -79,14 +80,17 @@ class Formulario extends React.Component {
     const { value } = this.state;
     return (
       <label htmlFor="value">
-        Valor
+        Valor:
+        {' '}
         <input
           value={ value }
           data-testid="value-input"
-          type="number"
+          type="text"
           onChange={ this.handleChange }
           name="value"
           id="value"
+          placeholder="valor"
+          className="input-value"
         />
       </label>
     );
@@ -96,7 +100,8 @@ class Formulario extends React.Component {
     const { description } = this.state;
     return (
       <label htmlFor="description">
-        Descrição
+        Descrição:
+        {' '}
         <input
           type="text"
           id="description"
@@ -104,6 +109,8 @@ class Formulario extends React.Component {
           value={ description }
           onChange={ this.handleChange }
           name="description"
+          placeholder="descrição"
+          className="input-description"
         />
       </label>
     );
@@ -113,15 +120,17 @@ class Formulario extends React.Component {
     const { tag } = this.state;
     return (
       <label htmlFor="tag">
-        Categoria
+        Categoria:
+        {' '}
         <select
           id="tag"
           data-testid="tag-input"
           value={ tag }
           onChange={ this.handleChange }
           name="tag"
+          className="select-form"
         >
-          <option value="">Selecione uma categoria</option>
+          <option value="">Selecione</option>
           <option>Alimentação</option>
           <option>Lazer</option>
           <option>Trabalho</option>
@@ -140,13 +149,15 @@ class Formulario extends React.Component {
         { this.handleValue() }
         { this.handleDescription() }
         <label htmlFor="currency">
-          Moeda
+          Moeda:
+          {' '}
           <select
             data-testid="currency-input"
             id="currency"
             value={ currency }
             onChange={ this.handleChange }
             name="currency"
+            className="select-form"
           >
             {/* <option value=''>Selecione uma moeda</option> */}
             {currencies.map((currence, index) => (
@@ -155,15 +166,17 @@ class Formulario extends React.Component {
           </select>
         </label>
         <label htmlFor="method">
-          Método de pagamento
+          Método de pagamento:
+          {' '}
           <select
             id="method"
             data-testid="method-input"
             value={ method }
             onChange={ this.handleChange }
             name="method"
+            className="select-form"
           >
-            <option value="">Selecione um método de pagamento</option>
+            <option value="">Selecione</option>
             <option>Dinheiro</option>
             <option>Cartão de crédito</option>
             <option>Cartão de débito</option>
@@ -172,6 +185,7 @@ class Formulario extends React.Component {
         {this.handleTag()}
         <button
           type="submit"
+          className="btn-add"
         >
           Adicionar despesa
         </button>
