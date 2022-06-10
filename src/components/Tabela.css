@@ -1,0 +1,30 @@
+table {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.head-table {
+  display: flex;
+  justify-content: space-between;
+  background-color: #14213D;
+  padding: 8px 16px;
+  color: white;
+}
+
+th {
+  font-weight: 500;
+  width: 12.5%;
+}
+
+.body-table {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  background-color: #E5E5E5;
+}
+
+td {
+  width: 12.5%;
+  text-align: center;
+}

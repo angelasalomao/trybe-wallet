@@ -45,7 +45,7 @@ class Login extends React.Component {
     return (
       <div className="main-login">
         <div className="titles-page">
-        <h1 className="title">Trybe Wallet</h1>
+        <h1 className="title-login">Trybe Wallet</h1>
         <h2 className="sub-title">Sua carteira virtual</h2>
         </div>
       <div className="login">

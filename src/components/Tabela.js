@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import './Tabela.css';
 
 class Tabela extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class Tabela extends React.Component {
     return (
       <table>
         <thead>
-          <tr>
+          <tr className="head-table">
             <th>Descrição</th>
             <th>Tag</th>
             <th>Método de pagamento</th>
@@ -23,7 +24,7 @@ class Tabela extends React.Component {
           {expenses.map((expense) => {
             const calcExpense = expense.exchangeRates[expense.currency];
             return (
-              <tr key={ expense.id }>
+              <tr  className="body-table" key={ expense.id }>
                 <td>{expense.description}</td>
                 <td>{expense.tag}</td>
                 <td>{expense.method}</td>
