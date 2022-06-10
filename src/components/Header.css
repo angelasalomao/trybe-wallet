@@ -1,0 +1,25 @@
+p {
+  margin: 0;
+}
+
+.title {
+  color: #FCA311;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.header-wallet {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-wallet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-currency {
+  margin-left: 36px;
+}
