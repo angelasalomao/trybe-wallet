@@ -18,3 +18,5 @@ Os objetivos desse projeto foi desenvolver uma aplicação que simula uma cartei
 * Criar dispatchers;
 * Conectar o Redux aos componentes React;
 
+<img src="imagens/Login.png" alt="Login"/>
+<img src="imagens/Carteira.png" alt="Carteira"/>
